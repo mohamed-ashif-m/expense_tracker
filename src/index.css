@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Expense Tracker Design System - Modern Fintech UI */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 220 20% 97%;
+    --foreground: 222 15% 20%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 20%;
+
+    /* Brand Colors - Finance Theme */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 65%;
+
+    /* Financial Status Colors */
+    --income: 142 76% 36%;
+    --income-foreground: 0 0% 100%;
+    --income-light: 142 76% 96%;
+    
+    --expense: 0 84% 60%;
+    --expense-foreground: 0 0% 100%;
+    --expense-light: 0 84% 96%;
+    
+    --savings: 45 93% 47%;
+    --savings-foreground: 0 0% 100%;
+    --savings-light: 45 93% 96%;
+
+    /* Category Colors */
+    --category-food: 25 95% 53%;
+    --category-transport: 217 91% 60%;
+    --category-entertainment: 271 81% 56%;
+    --category-shopping: 340 82% 52%;
+    --category-health: 142 71% 45%;
+    --category-bills: 210 40% 45%;
+    --category-other: 215 16% 46%;
+
+    /* UI Elements */
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 222 15% 20%;
+    
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 16% 46%;
+    
+    --accent: 220 13% 95%;
+    --accent-foreground: 222 15% 20%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 45%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Design Elements */
+    --radius: 0.75rem;
+    --shadow-soft: 0 2px 8px -2px hsl(220 20% 20% / 0.08);
+    --shadow-medium: 0 8px 24px -4px hsl(220 20% 20% / 0.12);
+    --shadow-strong: 0 16px 40px -8px hsl(220 20% 20% / 0.16);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-income: linear-gradient(135deg, hsl(var(--income)), hsl(142 76% 50%));
+    --gradient-expense: linear-gradient(135deg, hsl(var(--expense)), hsl(0 84% 70%));
+    --gradient-background: linear-gradient(180deg, hsl(var(--background)), hsl(220 20% 94%));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222 15% 8%;
+    --foreground: 220 20% 95%;
+    --card: 222 15% 10%;
+    --card-foreground: 220 20% 95%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --border: 222 15% 20%;
+    --input: 222 15% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-foreground;
+  }
+}
